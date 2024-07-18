@@ -1,0 +1,12 @@
+services:
+  rust:
+    build:
+      context: .
+      target: final
+    ports:
+      - "${APP_LOCAL_PORT}:${APP_CONTAINER_PORT}"
+    environment:
+      - APP_CONTAINER_PORT=${APP_CONTAINER_PORT}
+      - ADDRESS=${ADDRESS}
+      
+    
